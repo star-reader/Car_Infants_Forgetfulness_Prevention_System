@@ -1,7 +1,6 @@
 # Car_Infants_Forgetfulness_Prevention_System
 Car_Infants_Forgetfulness_Prevention_System，⻋辆婴幼⼉防遗忘系统
 
-**2023 SCAU-AIENSS 华南农业大学校科联自科部项目**
 
 # front_end
 the front_end part of this project, written by Vue3 with Vite + TypeScript
