@@ -4,19 +4,23 @@
             <div class="info">系统状态{{ isOk ? '正常' : '错误' }}</div>
         </div>
     </div>
+    <Alert />
 </template>
 
 <script lang='ts' setup>
 import pubsub from 'pubsub-js'
-import { ref } from 'vue';
+import { ref } from 'vue'
+import Alert from './Alert.vue'
 
-const isOk = ref(true)
+const isOk = ref(false)
 
 pubsub.subscribe('received-data',(_, data: ReceivedData) => {
     if (data.temperature > 35 || data.warningState || !data.connectionState){
         isOk.value = false
+        pubsub.publish('alert-status', true)
     }else{
         isOk.value = true
+        pubsub.publish('alert-status', false)
     }
 })
 
