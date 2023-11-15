@@ -15,8 +15,8 @@ import { setMqttServer } from './hooks/useMqttServer';
 import useUploadData from './hooks/useUploadData';
 
 onMounted(() => {
-    setMqttServer()
-    setInterval(useUploadData, 6000)
+    //  setMqttServer()
+    //  setInterval(useUploadData, 6000)
 })
 
 </script>
